@@ -1,6 +1,6 @@
 (function() {
 
-    var mnemonic = new Mnemonic("english");
+    var mnemonic = new Mnemonic("italian");
     var seed = null
     var bip32RootKey = null;
     var bip32ExtendedKey = null;
@@ -259,7 +259,7 @@
         // Check each word
         for (var i=0; i<proper.length; i++) {
             var word = proper[i];
-            if (WORDLISTS["english"].indexOf(word) == -1) {
+            if (WORDLISTS["italian"].indexOf(word) == -1) {
                 console.log("Finding closest match to " + word);
                 var nearestWord = findNearestWord(word);
                 return word + " not in wordlist, did you mean " + nearestWord + "?";
@@ -479,7 +479,7 @@
     }
 
     function findNearestWord(word) {
-        var words = WORDLISTS["english"];
+        var words = WORDLISTS["italian"];
         var minDistance = 99;
         var closestWord = words[0];
         for (var i=0; i<words.length; i++) {
